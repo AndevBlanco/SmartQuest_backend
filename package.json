@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start_locale": "nodemon -r dotenv/config index.js"
   },
   "author": "Fabio Blanco, Esteban Muñoz, Santiago Pujana",
   "license": "MIT",
@@ -19,6 +20,7 @@
     "mongoose": "^5.10.5"
   },
   "devDependencies": {
+    "dotenv": "^16.0.1",
     "nodemon": "^2.0.4"
   }
 }

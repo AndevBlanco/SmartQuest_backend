@@ -16,15 +16,10 @@ var UsersRoutes = require('./routes/users');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
+console.log(process.env.URL_FRONTEND);
 // Rutas
-app.use('/questions', cors({origin: 'https://smartquest-frontend.herokuapp.com'}), QuestionsRoutes);
-app.use('/subjects', cors({origin: 'https://smartquest-frontend.herokuapp.com'}), SubjectsRoutes);
-app.use('/users', cors({origin: 'https://smartquest-frontend.herokuapp.com'}), UsersRoutes);
+app.use('/questions', cors({origin: process.env.URL_FRONTEND}), QuestionsRoutes);
+app.use('/subjects', cors({origin: process.env.URL_FRONTEND}), SubjectsRoutes);
+app.use('/users', cors({origin: process.env.URL_FRONTEND}), UsersRoutes);
 
-
-/* app.use('/questions', cors({origin: 'http://localhost:3000'}), QuestionsRoutes);
-app.use('/subjects', cors({origin: 'http://localhost:3000'}), SubjectsRoutes);
-app.use('/users', cors({origin: 'http://localhost:3000'}), UsersRoutes); */
-
-// Exportar
 module.exports = app;
