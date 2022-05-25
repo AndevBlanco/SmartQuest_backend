@@ -17,7 +17,6 @@ var controller = {
         async function hashPassword(password) {
             const salt = await bcrypt.genSalt(10)
             const hash = await bcrypt.hash(password, salt)
-            console.log(hash)
             user.password = hash;
             user.save((err, userStored) => {
                 return res.status(200).send({user: userStored});
@@ -30,7 +29,6 @@ var controller = {
         var params = req.body;
         var nameUser = params.xusername;
         var passUser = params.xpassword;
-
         Users.findOne({email: nameUser}, function(err, result){
             if(err) {
                 return res.status(500).send({login: false});

@@ -16,7 +16,6 @@ var UsersRoutes = require('./routes/users');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-console.log(process.env.URL_FRONTEND);
 // Rutas
 app.use('/questions', cors({origin: process.env.URL_FRONTEND}), QuestionsRoutes);
 app.use('/subjects', cors({origin: process.env.URL_FRONTEND}), SubjectsRoutes);
