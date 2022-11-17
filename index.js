@@ -2,6 +2,7 @@
 
 var mongoose = require('mongoose');
 var app = require('./app');
+require('dotenv').config();
 //mongodb+srv://AndresBlanco07:ohv0SqUOAp6ckeil@clustersq.trssb.mongodb.net/SmartQuest.Kiev?retryWrites=true&w=majority
 mongoose.Promise = global.Promise;
 mongoose.connect(
