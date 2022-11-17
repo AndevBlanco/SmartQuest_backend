@@ -19,6 +19,6 @@ app.use(bodyParser.json());
 // Rutas
 app.use('/questions', cors({origin: process.env.URL_FRONTEND}), QuestionsRoutes);
 app.use('/subjects', cors({origin: process.env.URL_FRONTEND}), SubjectsRoutes);
-app.use('/users', cors({origin: process.env.URL_FRONTEND}), UsersRoutes);
+app.use('/users', cors({origin: '*'}), UsersRoutes);
 
 module.exports = app;
