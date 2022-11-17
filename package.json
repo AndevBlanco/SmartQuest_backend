@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "start_locale": "nodemon -r dotenv/config index.js",
-    "build": "node index.js"
+    "build": "node index.js",
+    "start_locale": "nodemon -r dotenv/config index.js"
   },
   "author": "Fabio Blanco, Esteban Muñoz, Santiago Pujana",
   "license": "MIT",
