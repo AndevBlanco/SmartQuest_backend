@@ -16,8 +16,12 @@ phases:
 # Include only the files required for your application to run.
 artifacts:
   files:
-    - public/**/*
-    - src/**/*
+    - controllers/**/*
+    - middlewares/**/*
+    - models/**/*
+    - routes/**/*
+    - app.js
+    - index.js
     - package.json
     - appspec.yml
     - scripts/**/*
